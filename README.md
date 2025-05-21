@@ -14,10 +14,9 @@ sudo apt install bibata-cursor-theme # Mouse cursor
 #### From source
 
 To be compiled and installed:
-- `hyprpaper`
-- `ghostty`
-- `fuzz`
-- `swaylock`
+- **`hyprpaper`**: https://github.com/hyprwm/hyprpaper
+- **`ghostty`**: https://github.com/ghostty-org/ghostty
+- **`hyprlock`**: https://github.com/hyprwm/hyprlock
 
 ### Keybindings custom
 
