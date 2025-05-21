@@ -320,19 +320,24 @@ window-rule {
     open-floating true
 }
 
-// Example: block out two password managers from screen capture.
+// Example: block out password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
 window-rule {
     match app-id=r#"^org\.keepassxc\.KeePassXC$"#
     match app-id=r#"^org\.gnome\.World\.Secrets$"#
-    match app-id="discord"
-    match app-id="vesktop"
     match title="Bitwarden"
 
     block-out-from "screen-capture"
 
     // Use this instead if you want them visible on third-party screenshot tools.
     // block-out-from "screencast"
+}
+
+// Block discord from screen shares
+window-rule {
+    match app-id="discord"
+    match app-id="vesktop"
+    block-out-from "screen-capture"
 }
 
 // Example: enable rounded corners for all windows.
