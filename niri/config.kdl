@@ -338,10 +338,11 @@ window-rule {
     // block-out-from "screencast"
 }
 
-// Block discord from screen shares
+// Block discord and teams from screen shares
 window-rule {
     match app-id="discord"
     match app-id="vesktop"
+    match app-id=r#"^com\.github\.IsmaelMartinez\.teams_for_linux$"#
     block-out-from "screen-capture"
 }
 
