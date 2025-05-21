@@ -14,6 +14,10 @@ debug {
     wait-for-frame-completion-in-pipewire
 }
 
+// Workspaces
+workspace "browser"
+workspace "chat"
+
 // Input device configuration.
 // Find the full list of options on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Input
@@ -339,6 +343,13 @@ window-rule {
     match app-id="discord"
     match app-id="vesktop"
     block-out-from "screen-capture"
+}
+
+// Always open discord and teams in chat workspace
+window-rule {
+    match app-id="discord"
+    match app-id=r#"^com\.github\.IsmaelMartinez\.teams_for_linux$"#
+    open-on-workspace "chat"
 }
 
 // Example: enable rounded corners for all windows.
